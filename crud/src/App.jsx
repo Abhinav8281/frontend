@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL;
-
-
-axios.get(`${API_URL}/api/users`);
+const API = `${import.meta.env.VITE_API_URL}/api/tasks`;
 
 function App() {
-  const API = "http://localhost:5000/api/tasks";
-
   const [tasks, setTasks] = useState([]);
 
   const [form, setForm] = useState({
@@ -18,7 +13,6 @@ function App() {
   });
 
   const [editId, setEditId] = useState(null);
-
 
   const fetchTasks = async () => {
     try {
