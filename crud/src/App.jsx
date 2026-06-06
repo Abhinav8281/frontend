@@ -3,6 +3,7 @@ import axios from "axios";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+
 axios.get(`${API_URL}/api/users`);
 
 function App() {
